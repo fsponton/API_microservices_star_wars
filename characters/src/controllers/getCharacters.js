@@ -1,7 +1,8 @@
 const Characters = require("../data");
+const { response } = require("../utils")
 
 module.exports = async (req, res) => {
-    res.status(200).json(await Characters.list());
+    response(res, 200, await Characters.list())
 }
 
 

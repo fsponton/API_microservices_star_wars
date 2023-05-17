@@ -1,6 +1,6 @@
 const { Router } = require("express");
 const controllers = require("../controllers")
-
+const middleware = require("../middlewares")
 
 const router = Router();
 
@@ -10,6 +10,6 @@ router.get("/", (req, res) => {
 
 router.get("/characters", controllers.getCharacters);
 
-router.post("/createCharacter", controllers.createCharacter)
+router.post("/createCharacter", middleware.characterValidation, controllers.createCharacter)
 
 module.exports = router;
