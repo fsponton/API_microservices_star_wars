@@ -2,12 +2,10 @@ const express = require("express");
 const morgan = require("morgan");
 
 const server = express();
-
 server.use(morgan("dev"));
 server.use(express.json());
 
 server.use("/", require("./routes"));
-
 
 // si uno pone una ruta que no existe se ve el siguiente error.
 server.use("*", (req, res) => {

@@ -3,7 +3,7 @@ const { createProxyMiddleware } = require("http-proxy-middleware");
 
 const app = express();
 
-app.use("/characters", createProxyMiddleware({
+app.use('/characters', createProxyMiddleware({
     target: "http://localhost:8001",
     changeOrigin: true
 }));
@@ -22,5 +22,5 @@ app.use("/planets", createProxyMiddleware({
 
 const PORT = 8000
 app.listen(PORT, () => {
-    console.log(`Gateway listening on port ${PORT}`)
+    console.log(`Gateway API Star Wars listening on port ${PORT}`)
 })
