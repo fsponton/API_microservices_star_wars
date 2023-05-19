@@ -8,6 +8,7 @@ app.use('/characters', createProxyMiddleware({
     changeOrigin: true
 }));
 
+//test
 
 app.use("/films", createProxyMiddleware({
     target: "http://api-films:8002",
