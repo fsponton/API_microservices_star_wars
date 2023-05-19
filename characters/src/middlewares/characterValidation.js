@@ -5,11 +5,15 @@ module.exports = (req, res, next) => {
     // if (name) return next()
     // else throw new ClientError("Error en el nombre", 401)
 
+    // for (let prop in body) {
+    //     const value = body[prop]
+    //     if (value === null) throw new ClientError(`Falta el valor de ${prop}`, 401)
+    // }
+
     const { body } = req
 
     for (let prop in body) {
-        const value = body[prop]
-        if (value === null) throw new ClientError(`Falta el valor de ${prop}`, 401)
+        if (!body[prop]) throw new ClientError(`Falta el valor de ${prop}`, 401)
     }
 
 
