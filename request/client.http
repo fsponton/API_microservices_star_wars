@@ -8,7 +8,12 @@ GET http://localhost:8000/characters
 
 ####
 
-POST  http://localhost:8000/createCharacter
+POST  http://localhost:8004/Character
+Content-Type: application/json
 
+{
+    "_id":"9898989",
+    "name":"frannnn"
+}
 
 ####
