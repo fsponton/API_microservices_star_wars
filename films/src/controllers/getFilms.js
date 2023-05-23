@@ -1,7 +1,8 @@
 const Films = require("../data");
-
+const { response } = require("../utils")
 
 
 module.exports = async (req, res) => {
-  res.status(200).json(await Films.list())
+  const result = await Films.list()
+  response(res, 200, result.data)
 }

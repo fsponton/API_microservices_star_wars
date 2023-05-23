@@ -1,5 +1,4 @@
 const server = require("./src/server");
-
 // const store = require("./src/config/DDBB")
 
 // Character.list()
@@ -22,11 +21,12 @@ const server = require("./src/server");
 // store["Planet"].list().then((res) => console.log(res))
 
 //
-// store["Character"].create({ "_id": "99999", "name": "dante" }).then((res) => console.log(res))
+//store["Character"].create({ "_id": "777777777", "name": "daeeente" }).then((res) => console.log(res))
 
 // store["Character"].getById(99999).then((res) => console.log(res))
 
 const PORT = 8004
+
 server.listen(PORT, () => {
     console.log(`DATABASE listening on port ${PORT}`);
 });

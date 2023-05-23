@@ -2,14 +2,14 @@ const axios = require("axios")
 
 module.exports = {
     list: async () => {
-        return await axios.get("http:localhost:8004/Character")
+        return await axios.get("http://database:8004/Character")
     },
 
-    create: async (character) => {
+    create: async (formCharacter) => {
         return await axios({
             method: "post",
-            url: "http:localhost:8004/Character",
-            data: character
+            url: "http://database:8004/Character",
+            data: formCharacter,
         })
     }
 }

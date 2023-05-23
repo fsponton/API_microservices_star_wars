@@ -1,4 +1,4 @@
-GET http://localhost:8000/
+GET http://localhost:8002/films
 
 ###
 
@@ -11,9 +11,33 @@ GET http://localhost:8000/characters
 POST  http://localhost:8004/Character
 Content-Type: application/json
 
-{
-    "_id":"9898989",
-    "name":"frannnn"
+ {
+"_id":"11119916611112666662111111111111111111",
+"name":"ffffrddddddandd"
 }
 
 ####
+
+POST  http://localhost:8001/characters/create
+Content-Type: application/json
+
+ {
+"_id":"420",
+"name":"ffffrddddddandd"
+}
+
+
+###
+POST  http://localhost:8000/characters/create
+Content-Type: application/json
+
+ {
+"_id":"422",
+"name":"frans"
+}
+
+####
+
+GET http://localhost:8000/films
+
+

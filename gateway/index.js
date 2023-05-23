@@ -2,6 +2,7 @@ const express = require("express");
 const { createProxyMiddleware } = require("http-proxy-middleware");
 
 const app = express();
+//no usar bodyparser y express.json
 
 app.use('/characters', createProxyMiddleware({
     target: "http://api-characters:8001",

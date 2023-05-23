@@ -1,31 +1,15 @@
 const { Router } = require("express")
-const store = require("../config/DDBB/index")
 const router = Router();
-const { validateModel } = require("../middlewares")
-
-router.get("/:model", validateModel, async (req, res) => {
-    const { model } = req.params
-    const response = await store[model].list()
-    res.status(200).json(response)
-})
+const middlewares = require("../middlewares")
+const controllers = require("../controller")
 
 
-
-router.get("/:model/:id", validateModel, async (req, res) => {
-    const { model, id } = req.params
-    const response = await store[model].getById(id)
-    res.status(200).json(response)
-})
+router.get("/:model", middlewares.validateModel, controllers.getCharacters)
 
 
-router.post("/:model", validateModel, async (req, res) => {
-    const { model } = req.params
-    const character = req.body
+router.get("/:model/:id", middlewares.validateModel, controllers.getCharactersById)
 
-    const response = await store[model].create(character)
 
-    res.status(200).json(response)
-})
-
+router.post("/:model", middlewares.validateModel, controllers.createCharacter)
 
 module.exports = router;
