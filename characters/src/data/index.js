@@ -14,7 +14,6 @@ module.exports = {
     },
 
     getById: async (id) => {
-        console.log(id)
         return await axios({
             method: "get",
             url: `http://database:8004/Character/${id}`
