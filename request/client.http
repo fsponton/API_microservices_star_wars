@@ -1,43 +1,37 @@
-GET http://localhost:8002/films
-
-###
-
-/// CHARACTERS
+// REQUEST TO GATEWAY - GET CHARACTERS
 
 GET http://localhost:8000/characters
 
-####
+###
 
-POST  http://localhost:8004/Character
-Content-Type: application/json
+// REQUEST TO GATEWAY - GET Character by id
 
- {
-"_id":"11119916611112666662111111111111111111",
-"name":"ffffrddddddandd"
-}
-
-####
-
-POST  http://localhost:8001/characters/create
-Content-Type: application/json
-
- {
-"_id":"420",
-"name":"ffffrddddddandd"
-}
-
+GET http://localhost:8000/characters/999
 
 ###
+
+
+///REQUEST TO GATEWAY - POST CREATE CHARACTER
 POST  http://localhost:8000/characters/create
 Content-Type: application/json
 
  {
-"_id":"422",
-"name":"frans"
+"_id":"9999",
+"name":"francisco.sponton"
 }
 
 ####
 
+
+// REQUEST TO GATEWAY - GET FILMS
+
 GET http://localhost:8000/films
 
+###
+
+// REQUEST TO GATEWAY - GET PLANETS
+
+GET http://localhost:8000/planets
+
+###
 

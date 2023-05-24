@@ -21,7 +21,7 @@ planetSchema.statics.list = async function () {
         .populate("films", ["name"])
 }
 
-planetSchema.statics.getById = async function () {
+planetSchema.statics.getById = async function (id) {
     return await this.findById(id)
 }
 
